@@ -1,0 +1,13 @@
+{
+	"manifest_version": 2,
+	"name": "Black Crows Nudger",
+	"version": "1.0",
+	"description": "Custom intervention for Reddit",
+	"permissions": ["activeTab"],
+	"content_scripts": [
+		{
+			"matches": ["*://*.reddit.com/*"],
+			"js": ["content.js"]
+		}
+	]
+}
