@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
-	"name": "Black Crows Nudger",
+	"name": "ContentPause - A Reddit Nudger",
 	"version": "1.0",
-	"description": "Custom intervention for Reddit",
+	"description": "A custom intervention for Reddit for the Black Crows Group at DLSU AY23-24 T1 for the course HCI2000. This intervention nudges users about their time spent on Reddit by pausing their scrolling and asking if they want to proceed.",
 	"permissions": ["activeTab"],
 	"content_scripts": [
 		{
