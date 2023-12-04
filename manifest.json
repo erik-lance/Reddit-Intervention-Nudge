@@ -7,7 +7,7 @@
 	"content_scripts": [
 		{
 			"matches": ["*://*.reddit.com/*"],
-			"js": ["content.js"]
+			"js": ["content.js", "sweetalert2.all.min.js"]
 		}
 	]
 }
