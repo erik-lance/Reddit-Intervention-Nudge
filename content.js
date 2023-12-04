@@ -6,23 +6,30 @@ const script = document.createElement("script");
 script.src = chrome.extension.getURL("sweetalert2.all.min.js");
 document.head.appendChild(script);
 
-// Set your preferred time limit for scrolling in milliseconds
-const scrollFreezeTimeLimit = 10000; // 10 seconds
+// Milliseconds to wait before nudging
+// Currently set to 5 minutes
+const scrollFreezeTimeLimit = 300000;
 
 let scrollingTimer;
+let timesNudged = 0;
 
 // Function to freeze scrolling and display a SweetAlert overlay
 function freezeScrolling() {
+	timesNudged++;
+
 	// Pause any existing scrolling timer
 	clearTimeout(scrollingTimer);
 
 	// Freeze scrolling
 	document.body.style.overflow = "hidden";
 
+	// Total time reading
+	const totalTime = (timesNudged * scrollFreezeTimeLimit) / 60000;
+
 	// Display SweetAlert overlay
 	Swal.fire({
 		title: "Take a break!",
-		text: "You've been scrolling for a while. Take a moment to reflect.",
+		text: "You've been scrolling for " + totalTime + " minutes. Take a break!",
 		icon: "info",
 		showCancelButton: true,
 		confirmButtonText: "Resume scrolling",
