@@ -7,8 +7,8 @@ script.src = chrome.runtime.getURL("sweetalert2.all.min.js");
 document.head.appendChild(script);
 
 // Milliseconds to wait before nudging
-// Currently set to 1 minute
-const scrollFreezeTimeLimit = 60000;
+// Currently set to 5 minute
+const scrollFreezeTimeLimit = 300000;
 
 let scrollingTimer;
 let timesNudged = 0;
