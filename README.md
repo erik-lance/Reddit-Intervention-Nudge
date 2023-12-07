@@ -5,9 +5,9 @@
 1. Clone the repository
 2. Open a chromium based browser (Chrome, Edge, Brave, etc.)
 3. Go to the extensions page
-   1. Chrome: chrome://extensions/
-   2. Edge: edge://extensions/
-   3. Brave: brave://extensions/
+   1. Chrome: `chrome://extensions/`
+   2. Edge: `edge://extensions/`
+   3. Brave: `brave://extensions/`
 4. Enable developer mode
 5. Click "Load unpacked"
 6. Select the folder you cloned the repository to
