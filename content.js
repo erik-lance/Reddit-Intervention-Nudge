@@ -3,12 +3,12 @@ console.log("Black Crows Content Pause is starting...");
 // Include SweetAlert 2
 // Include SweetAlert 2 using a script tag
 const script = document.createElement("script");
-script.src = chrome.extension.getURL("sweetalert2.all.min.js");
+script.src = chrome.runtime.getURL("sweetalert2.all.min.js");
 document.head.appendChild(script);
 
 // Milliseconds to wait before nudging
-// Currently set to 5 minutes
-const scrollFreezeTimeLimit = 300000;
+// Currently set to 1 minute
+const scrollFreezeTimeLimit = 60000;
 
 let scrollingTimer;
 let timesNudged = 0;
